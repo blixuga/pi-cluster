@@ -1,5 +1,5 @@
-[master]
+[headnode]
 pi@pi-1
 
-[nodes]
+[cnodes]
 pi@pi-[2:5]

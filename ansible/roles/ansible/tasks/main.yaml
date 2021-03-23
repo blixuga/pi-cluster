@@ -1,0 +1,16 @@
+---
+- name: Add ansible to apt sources
+  ansible.builtin.apt_repository:
+    repo: deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
+    state: present
+    filename: ansible
+
+- name: Install Ansible
+  ansible.builtin.apt:
+    name: "ansible"
+    state: present
+
+- name: Install Ansible Lint
+  ansible.builtin.apt:
+    name: "ansible-lint"
+    state: present

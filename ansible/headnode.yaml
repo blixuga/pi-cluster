@@ -1,0 +1,8 @@
+---
+- hosts: headnode
+  user: pi
+  become: yes
+  become_method: sudo
+  roles:
+    - ansible
+    - headnode

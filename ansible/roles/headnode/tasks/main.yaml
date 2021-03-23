@@ -1,15 +1,15 @@
 ---
 - name: install headnode packages
-  apt: name={{item}} state=installed
+  apt: name={{item}} state=installed install_recommends=true
   with_items:
+    - vim
     - git
     - screen
     - nfs-kernel-server
     - nfs-common
-
-- name: Add ansible to apt sources
-  ansible.builtin.apt_repository:
-    repo: deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
-    state: present
-    filename: ansible
+    - tcpdump
+    - nmap
+    - locate
+    - isc-dhcp-server
+    - clustershell
 
