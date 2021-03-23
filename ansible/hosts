@@ -1,5 +1,8 @@
 [headnode]
-pi@pi-1
+pi-1 ansible_host=192.168.2.1
 
 [cnodes]
-pi@pi-[2:5]
+pi-2 ansible_host=192.168.2.2
+pi-3 ansible_host=192.168.2.3
+pi-4 ansible_host=192.168.2.4
+pi-5 ansible_host=192.168.2.5

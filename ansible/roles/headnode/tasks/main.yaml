@@ -1,15 +1,13 @@
 ---
 - name: install headnode packages
-  apt: name={{item}} state=installed install_recommends=true
+  apt: name={{item}} state=present install_recommends=true
   with_items:
-    - vim
-    - git
     - screen
     - nfs-kernel-server
-    - nfs-common
     - tcpdump
     - nmap
     - locate
     - isc-dhcp-server
     - clustershell
 
+- include_tasks: nis_as_server.yaml

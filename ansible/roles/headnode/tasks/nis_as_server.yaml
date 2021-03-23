@@ -1,0 +1,6 @@
+---
+- name: install NIS Server packages
+  apt:
+    name: nis
+    state: latest
+    install_recommends: true
