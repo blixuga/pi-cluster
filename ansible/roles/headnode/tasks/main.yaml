@@ -1,0 +1,15 @@
+---
+- name: install headnode packages
+  apt: name={{item}} state=installed
+  with_items:
+    - git
+    - screen
+    - nfs-kernel-server
+    - nfs-common
+
+- name: Add ansible to apt sources
+  ansible.builtin.apt_repository:
+    repo: deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
+    state: present
+    filename: ansible
+

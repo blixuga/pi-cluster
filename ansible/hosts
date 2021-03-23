@@ -1,0 +1,5 @@
+[master]
+pi@pi-1
+
+[nodes]
+pi@pi-[2:5]

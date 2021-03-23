@@ -1,0 +1,13 @@
+---
+- name: Install Vim
+  hosts: all
+  remote_user: pi
+  
+  tasks:
+  - name: Install Vim
+    become: true
+    become_method: sudo
+    apt:
+      name: vim
+      state: latest
+      install_recommends: true
